@@ -41,7 +41,7 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:20.5.1")
     implementation ("com.google.firebase:firebase-auth:22.1.0") // Optional if authentication is needed
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
-    implementation ("com.intuit.sdp:sdp-android:1.1.1")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

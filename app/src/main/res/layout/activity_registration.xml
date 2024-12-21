@@ -73,6 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
+                    android:text="Preet"
                     android:id="@+id/usernameEditText_reg"
                     android:inputType="textPersonName" />
 
@@ -91,6 +92,7 @@
                     android:layout_width="match_parent"
                     android:fontFamily="@font/adamina"
                     android:layout_height="wrap_content"
+                    android:text="P@ssw0rd"
                     android:id="@+id/userpasswordEditText_reg"
                     android:inputType="textWebPassword" />
 
@@ -108,6 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
+                    android:text="preet@gmail.com"
                     android:id="@+id/usermailIDEditText_reg"
                     android:inputType="textPersonName" />
 
@@ -125,6 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/adamina"
+                    android:text="7894561230"
                     android:id="@+id/userMobileNOEditText_reg"
                     android:inputType="textPersonName" />
 
@@ -137,7 +141,8 @@
                 android:text="Registration"
                 android:padding="@dimen/_15sdp"
                 android:textColor="@color/white"
-                android:layout_margin="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:background="@drawable/gradient_bg"
                 android:backgroundTint="#FF5757"
                 android:layout_gravity="center"
