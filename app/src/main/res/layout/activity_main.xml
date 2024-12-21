@@ -8,90 +8,134 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textSize="60dp"
-        android:text=" User Login "/>
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:id="@+id/edittext_Layout"
-        android:padding="10dp">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/login_heading"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
-            android:hint="Username">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/usernameEditText"
-                android:inputType="textPersonName" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
-            app:passwordToggleEnabled="true"
-            android:hint="Password">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/userpasswordEditText"
-                android:inputType="textPersonName" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:gravity="center"
-        android:id="@+id/sign_in_Layout"
-        android:layout_below="@id/edittext_Layout"
-        android:orientation="horizontal">
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/abril_fatface"
+            android:text=" Welcome "
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Create a New User ! "/>
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/adamina"
+            android:id="@+id/login_subHeading"
+            android:layout_below="@id/login_heading"
+            android:textSize="@dimen/_12sdp"
+            android:text=" To continue using this app,\nplease sign in first. "/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_190sdp"
+            android:src="@drawable/log_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@id/login_subHeading"
+            android:id="@+id/login_image"/>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="#FF9800"
-            android:text="Sign IN "/>
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@id/login_image"
+            android:id="@+id/edittext_Layout"
+            android:paddingHorizontal="@dimen/_15sdp">
 
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+                android:hint="Username">
 
-    <Button
-        android:id="@+id/signInButton"
-        android:layout_marginHorizontal="10dp"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/sign_in_Layout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
-        android:text="Login" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:text="Preet"
+                    android:id="@+id/login_usernameEditText"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
+                app:passwordToggleEnabled="true"
+                android:hint="Password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
+                    android:text="P@ssw0rd"
+                    android:id="@+id/login_userpasswordEditText"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:id="@+id/sign_in_Layout"
+            android:layout_below="@id/edittext_Layout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/adamina"
+                android:text="Create a New User ! "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/open_reg_act_tv"
+                android:fontFamily="@font/abril_fatface"
+                android:textColor="#FF5757"
+                android:text="Sign IN "/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_Button"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/sign_in_Layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:padding="@dimen/_10sdp"
+            android:text="Sign In"
+            android:backgroundTint="#FF5757"
+            android:fontFamily="@font/abril_fatface"
+            android:background="@drawable/gradient_bg"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

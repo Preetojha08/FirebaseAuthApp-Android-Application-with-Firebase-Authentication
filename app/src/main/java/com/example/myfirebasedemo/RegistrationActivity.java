@@ -1,5 +1,6 @@
 package com.example.myfirebasedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -46,7 +47,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 if (validateInputs(user_name, user_password, user_email, user_phone))
                 {
-                    saveUserToFirebase(new User(user_name, user_password, user_email, user_phone));
+                    boolean success = saveUserToFirebase(new User(user_name, user_password, user_email, user_phone));
+                    if (success)
+                        startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
                 }
 
             }
@@ -74,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity {
         return true;
     }
 
-    private void saveUserToFirebase(User user) {
+    private Boolean saveUserToFirebase(User user) {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         String userId = databaseReference.push().getKey();
 
@@ -82,8 +85,10 @@ public class RegistrationActivity extends AppCompatActivity {
             databaseReference.child(userId).setValue(user)
                     .addOnSuccessListener(aVoid -> Toast.makeText(RegistrationActivity.this, "User registered successfully!", Toast.LENGTH_SHORT).show())
                     .addOnFailureListener(e -> Toast.makeText(RegistrationActivity.this, "Registration failed: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+            return true;
         } else {
             Toast.makeText(this, "Error generating User ID", Toast.LENGTH_SHORT).show();
+            return false;
         }
     }
 

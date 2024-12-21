@@ -1,10 +1,10 @@
 package com.example.myfirebasedemo;
 
 public class User {
-    private String username;
-    private String password;
-    private String email;
-    private String phone;
+    String username;
+    String password;
+    String email;
+    String phone;
 
     public User() {
         // Default constructor for Firebase

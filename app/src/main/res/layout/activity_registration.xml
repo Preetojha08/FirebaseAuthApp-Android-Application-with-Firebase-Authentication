@@ -9,6 +9,26 @@
     android:orientation="horizontal"
     tools:context=".RegistrationActivity">
 
+    <View
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/reg_downleft_corner"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/reg_upright_corner"/>
+
+    <View
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/up_stars"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,19 +46,33 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/abril_fatface"
-                android:text="User Registration"
+                android:text="Sign UP"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/adamina"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="Please complete your biodata correctly"
+                android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:layout_marginTop="@dimen/_10sdp"
                 style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
                 android:hint="Username">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
                     android:id="@+id/usernameEditText_reg"
                     android:inputType="textPersonName" />
 
@@ -49,11 +83,13 @@
                 android:layout_height="wrap_content"
                 app:passwordToggleEnabled="true"
                 android:layout_marginTop="@dimen/_8sdp"
+                app:hintTextAppearance="@font/adamina"
                 style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
                 android:hint="Password">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:fontFamily="@font/adamina"
                     android:layout_height="wrap_content"
                     android:id="@+id/userpasswordEditText_reg"
                     android:inputType="textWebPassword" />
@@ -64,12 +100,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/adamina"
                 style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
                 android:hint="Email">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
                     android:id="@+id/usermailIDEditText_reg"
                     android:inputType="textPersonName" />
 
@@ -77,6 +115,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
+                android:fontFamily="@font/adamina"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 style="@style/ThemeOverlay.Material3.TextInputEditText.FilledBox"
@@ -85,19 +124,24 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/adamina"
                     android:id="@+id/userMobileNOEditText_reg"
                     android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Registartion "
-                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Registration"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_20sdp"
+                android:background="@drawable/gradient_bg"
+                android:backgroundTint="#FF5757"
                 android:layout_gravity="center"
-                android:id="@+id/registerButton"/>
+                android:id="@+id/registerButton" />
 
         </LinearLayout>
 
